@@ -231,7 +231,9 @@ public class NewPlayerController : MonoBehaviour
         {
 			if(!isInvulnerable)
 			{
-            	hpCurrent-=2;
+				int dmg = col.gameObject.GetComponent<EnemyStats>().getAttackDmg();
+            	//hpCurrent-=2;
+				hpCurrent-=dmg;
 				isInvulnerable = true;
 				invulnEndTime = Time.time + invulnTime; 
 			}

@@ -7,7 +7,6 @@ public class GhostMovement : MonoBehaviour {
 	public bool MoveRight;
 	public int HP;
 
-
 	// Update is called once per frame
 	void Update() {
 		if(MoveRight) {
