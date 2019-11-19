@@ -47,4 +47,4 @@ MonoBehaviour:
   spawnDelay: 2
   enemy: {fileID: 0}
   active: 0
-  maxDistance: 5
+  maxDistance: 60
