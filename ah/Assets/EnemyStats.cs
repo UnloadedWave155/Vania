@@ -18,12 +18,16 @@ public class EnemyStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+		if(hpCurrent <= 0)
+		{
+			Destroy(gameObject);
+		}
     }
 
 	public void tookDamage(int amount)
 	{
 		hpCurrent-=amount;
+		Debug.Log(gameObject.name + " took " + amount + " damage.");
 	}
 	public void healDamage(int amount)
 	{

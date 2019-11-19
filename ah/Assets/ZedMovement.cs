@@ -41,20 +41,20 @@ public class ZedMovement : MonoBehaviour
 			transform.gameObject.SetActive(true);
 		}
 		//anim.SetInteger("moveX",moveX);
-		anim.SetFloat("moveX2", moveX2);
+		//anim.SetFloat("moveX2", moveX2);
     }
 
 	
 		
 	void OnCollisionEnter2D (Collision2D col)//this works
 	{
-		if (col.gameObject.tag == "bullet"){
-			
-			
-			transform.gameObject.SetActive(false);
-			canSpawn=true;
-
-		}
+//		if (col.gameObject.tag == "bullet"){
+//			
+//			
+//			transform.gameObject.SetActive(false);
+//			canSpawn=true;
+//
+//		}
 		if (col.gameObject.tag == "wall")
 		{
 			moveX = moveX * -1;
