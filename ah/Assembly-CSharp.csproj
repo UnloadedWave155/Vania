@@ -57,6 +57,7 @@
      <Compile Include="Assets\Bullet.cs" />
      <Compile Include="Assets\BulletScript.cs" />
      <Compile Include="Assets\CameraMovement.cs" />
+     <Compile Include="Assets\EnemyStats.cs" />
      <Compile Include="Assets\GhostMovement.cs" />
      <Compile Include="Assets\GUIController.cs" />
      <Compile Include="Assets\GUIHealthBar.cs" />

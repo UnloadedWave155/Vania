@@ -69,6 +69,7 @@ public class NewPlayerController : MonoBehaviour
 	//gun shooting stuff
 	public float attackTime;
 	private float attackTimeCounter;
+	private GameObject lastEnemyTouched;
 	
 	
     // Start is called before the first frame update
@@ -89,6 +90,7 @@ public class NewPlayerController : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
 		gameObject.transform.position = playerStart.transform.position;
 		myGUI = GetComponent<GUIController>();
+
     }
 
     // Update is called once per frame
@@ -103,6 +105,8 @@ public class NewPlayerController : MonoBehaviour
 			{
 				Debug.Log("Vulnerable again.");
 				isInvulnerable = false;
+				Debug.Log(lastEnemyTouched.gameObject.name);
+				Physics2D.IgnoreCollision(lastEnemyTouched.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>(), false);
 			}
 		}
 
@@ -229,12 +233,17 @@ public class NewPlayerController : MonoBehaviour
         }
 		if (col.gameObject.tag == "FOE")
         {
+			lastEnemyTouched = col.gameObject;
 			if(!isInvulnerable)
 			{
-            	hpCurrent-=2;
+				int dmg = col.gameObject.GetComponent<EnemyStats>().getAttackDmg();
+            	//hpCurrent-=2;
+				hpCurrent-=dmg;
 				isInvulnerable = true;
+				Physics2D.IgnoreCollision(col.gameObject.GetComponent<Collider2D>(), gameObject.GetComponent<Collider2D>());
 				invulnEndTime = Time.time + invulnTime; 
 			}
+
 			if(melee==true){
 				Destroy(col.gameObject);
 			}

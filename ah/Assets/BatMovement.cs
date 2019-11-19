@@ -7,7 +7,6 @@ public class BatMovement : MonoBehaviour {
 	public bool MoveRight;
 
 
-
     // Update is called once per frame
     void Update() {
 		if(MoveRight) {

@@ -9,6 +9,7 @@ public class BulletScript : MonoBehaviour
 	public float velX = 8f;
 	float velY = 0f;
 	private Rigidbody2D rb;
+	int damage = 2;
 
 	void Start()
 	{
@@ -21,6 +22,9 @@ public class BulletScript : MonoBehaviour
 			
 			Destroy(col.gameObject);		
 		}*/
+		if (col.gameObject.tag == "FOE"){
+			col.gameObject.GetComponent<EnemyStats>().tookDamage(damage);
+		}
 		Destroy(gameObject);
 		
 	}
