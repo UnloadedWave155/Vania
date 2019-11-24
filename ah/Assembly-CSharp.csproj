@@ -59,6 +59,8 @@
      <Compile Include="Assets\CameraMovement.cs" />
      <Compile Include="Assets\EnemyStats.cs" />
      <Compile Include="Assets\GhostMovement.cs" />
+     <Compile Include="Assets\GhostProjectile.cs" />
+     <Compile Include="Assets\GhostShoot.cs" />
      <Compile Include="Assets\GUIController.cs" />
      <Compile Include="Assets\GUIHealthBar.cs" />
      <Compile Include="Assets\MonsterMovement.cs" />
