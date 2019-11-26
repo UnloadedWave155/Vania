@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
  
          target = stop.transform;
  
-         maxDistance = 5;
+         //maxDistance = 5;
  
          
      }

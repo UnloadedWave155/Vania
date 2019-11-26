@@ -12,6 +12,7 @@ public class GhostProjectile : MonoBehaviour
 	private Rigidbody2D rb;
 	private float destroyTime = 4.5f;
 	private float startTime;
+	public bool canSpawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class GhostProjectile : MonoBehaviour
 		target = GameObject.FindGameObjectWithTag("player").transform;
 		startTime = Time.time;
 		destroyTime = startTime + destroyTime;
+		canSpawn=false;
     }
 
 	void Update()
@@ -26,7 +28,15 @@ public class GhostProjectile : MonoBehaviour
 		if(Time.time > destroyTime)
 		{
 			Instantiate(explosion, transform.position, Quaternion.identity);
-			Destroy(gameObject);
+			transform.gameObject.SetActive(false);
+			canSpawn=true;
+			
+			
+			//Destroy(gameObject);
+		}
+		if(canSpawn==true){
+			gameObject.transform.position = transform.position;
+			transform.gameObject.SetActive(true);
 		}
 	}
 
@@ -53,7 +63,9 @@ public class GhostProjectile : MonoBehaviour
 		if(col.gameObject.tag == "player")
 		{
 			Instantiate(explosion, transform.position, Quaternion.identity);
-			Destroy(gameObject);
+			transform.gameObject.SetActive(false);
+			canSpawn=true;
+			//Destroy(gameObject);
 		}
 	}
 }

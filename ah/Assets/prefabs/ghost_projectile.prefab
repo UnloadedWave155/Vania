@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7119615943003891657}
   - component: {fileID: 7119615943003891662}
   - component: {fileID: 249484967}
+  - component: {fileID: 101164272}
   m_Layer: 10
   m_Name: ghost_projectile
-  m_TagString: Untagged
+  m_TagString: FOE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7119615943003891663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -43.32, y: -0.45, z: 1.6903771}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 1, y: 1, z: 0.7}
   m_Children:
   - {fileID: 7119615944620547804}
   m_Father: {fileID: 0}
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: -1895955537
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1666058c1a0788c47aa1092699d5e710, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aba5a27d1482b294bb128f6e018ba193, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -136,6 +137,21 @@ MonoBehaviour:
     type: 3}
   speed: 3
   rotateSpeed: 200
+--- !u!114 &101164272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119615943003891663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b50e4f934341a934e9e25f5dc4fa5a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpCurrent: 999
+  hpMax: 999
+  attackDamage: 3
 --- !u!1001 &120571199077872407
 PrefabInstance:
   m_ObjectHideFlags: 0
