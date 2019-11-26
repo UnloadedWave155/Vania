@@ -32,7 +32,7 @@ public class GhostProjectile : MonoBehaviour
 			canSpawn=true;
 			
 			
-			//Destroy(gameObject);
+			Destroy(gameObject);
 		}
 		if(canSpawn==true){
 			gameObject.transform.position = transform.position;
@@ -65,7 +65,7 @@ public class GhostProjectile : MonoBehaviour
 			Instantiate(explosion, transform.position, Quaternion.identity);
 			transform.gameObject.SetActive(false);
 			canSpawn=true;
-			//Destroy(gameObject);
+			Destroy(gameObject);
 		}
 	}
 }
