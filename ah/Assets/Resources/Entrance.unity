@@ -10420,12 +10420,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &101164266 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7119615943003891663, guid: 16b5053b0355097459308622aa270f88,
-    type: 3}
-  m_PrefabInstance: {fileID: 7119615943158444397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &152485363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29345,7 +29339,8 @@ PrefabInstance:
         type: 3}
       propertyPath: enemy
       value: 
-      objectReference: {fileID: 101164266}
+      objectReference: {fileID: 7119615943003891663, guid: 16b5053b0355097459308622aa270f88,
+        type: 3}
     - target: {fileID: 7972146033895543142, guid: dc53d2e0bf8aff0488f527292059ae70,
         type: 3}
       propertyPath: maxDistance
@@ -68592,7 +68587,8 @@ PrefabInstance:
         type: 3}
       propertyPath: enemy
       value: 
-      objectReference: {fileID: 101164266}
+      objectReference: {fileID: 7119615943003891663, guid: 16b5053b0355097459308622aa270f88,
+        type: 3}
     - target: {fileID: 7972146033895543142, guid: dc53d2e0bf8aff0488f527292059ae70,
         type: 3}
       propertyPath: maxDistance
