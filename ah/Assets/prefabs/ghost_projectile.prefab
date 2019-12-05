@@ -150,9 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b50e4f934341a934e9e25f5dc4fa5a76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpCurrent: 999
-  hpMax: 999
-  attackDamage: 3
+  hpCurrent: 1
+  hpMax: 1
+  attackDamage: 1
 --- !u!1001 &120571199077872407
 PrefabInstance:
   m_ObjectHideFlags: 0
